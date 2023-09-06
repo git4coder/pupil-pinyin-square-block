@@ -1,0 +1,76 @@
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl {
+  page-break-inside: avoid;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 20px;
+}
+
+ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+li {
+  float: left;
+  margin: 0 5px;
+}
+
+li .word {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+li .word+.word {
+  margin-left: -2px;
+}
+
+li .word .pinyin {
+  font-size: 12px;
+}
+
+li .word .unit {
+  display: block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+  border: 2px solid #C00;
+}
+
+li .word .unit::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  border-top: 1px dotted #C00;
+}
+
+li .word .unit::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  border-left: 1px dotted #C00;
+}
